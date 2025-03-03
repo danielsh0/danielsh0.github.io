@@ -1,65 +1,174 @@
-body {
-    background: rgb(0, 0, 0);
-    background: radial-gradient(circle, rgba(0, 0, 0, 1) 27%, rgba(36, 137, 255, 1) 100%);
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "ADLaM Display", serif;
+    color: lightseagreen;
+}
+
+nav{
+    background: lightblue;
+    width: 100%;
+    border-top: 2px solid lightskyblue;
+    border-bottom: 2px solid lightskyblue;
     display: flex;
     flex-wrap: nowrap;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-
-.contenedor1 {
-    width: 15%;
-    height: 100%;
-    border-radius: 10px 10px 0px 10px;
-    background-color: rgba(25, 23, 23, 1.5);
+nav a{
+    width: 25%;
+    padding: .5em;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    color: whitesmoke;
-    align-items: center;
-    justify-content: center;
+
 }
 
-.im1 {
-    border-radius: 50%;
-    width: 11rem;
-    height: 13rem;
-    margin-top: 2em;
-    border: 2px solid rgb(24, 62, 186);
+ion-icon{
+    color: black;
+    font-size: 2em;
 }
 
-.contenedor1 p{
-    font-size: 1em;
+nav a:hover{
+    background: lightgreen;
+    color: beige;
+    transition: all .5s ease;
 }
 
-.contenedor2{
-    width: 60%;
-    height: 100%;
-    border-radius: 0px 10px 10px 0;
-    background-color: whitesmoke;
-    text-align: center;
-    margin-left: 0em;
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.contenedor2 #div2 {
+.baner{
     width: 100%;
-    height: 20em;
-    margin-top: 0;
-    padding: 4em;
-    background: lightgray;
-    color: rgb(24, 62, 186);
-    border-radius: 0 10px 0 0;
+    height: 30em;
+    margin-top: 3.5em;
+    margin-bottom: 2.5em;
+    background-size: 100% 100%;
+    box-shadow: 10px 10px 10px rgb(74, 32, 142);
+    display: flex;
+    flex-wrap: wrap;
+    animation: slider 15s infinite;
+}
+
+@keyframes slider{
+
+0%{background-image: url(/Items/descarga\ \(10\).jpeg)}
+60%{background-image: url(/Items/descarga\ \(11\).jpeg);}
+80%{background-image: url(/Items/descarga\ \(12\).jpeg);}
+100%{background-image: url(/Items/descarga\ \(13\).jpeg);}
+}
+
+
+section{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: .5em;
+}
+
+.baner section{
+    text-align: center;
     align-items: center;
-    justify-content: center;
+}
+
+section figure{
+    padding: 1em;
     text-align: center;
 }
 
-#div3{
-    margin-left: 2em;
+figure img{
+    width: 11em;
+    height: 13.5em;
+    padding: .3em;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px lightseagreen;
 }
 
+div h1{
+    font-size: 2.5em;
+    font-weight: .3em;
+}
 
+aside{
+    width: 100%;
+    height: 15em;
+    margin: auto;
+    padding: 2em;
+    margin-bottom: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    background: azure;
+}
 
+aside h2, p{
+    width: 100%;
+    text-align: center;
+    color: gray;
+}
+
+.row{
+    width: 100%;
+    height: 15em;
+    padding: 1em;
+    margin-bottom: 7.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+
+.column{
+    width: 33%;
+    padding: 5px;
+    position: relative;
+}
+
+.column img{
+    width: 100%;
+    height: 18em;
+    border-radius: .5em;
+}
+
+#cv{
+    margin-top: 5em;
+}
+
+::-webkit-scrollbar-track{
+    background: lightgray;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #a73434;
+}
+
+footer{
+    width: 100%;
+    height: 10em;
+    background: rgb(88, 83, 92);
+    color: #f1f1f1;
+    text-align: center;
+    padding: 2em;
+    border-top: 2px solid #817d7d;
+    display: flex;
+    flex-wrap: wrap;
+
+}
